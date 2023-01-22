@@ -1,35 +1,31 @@
 // tim uoc nguyen to lon nhat
+
 #include<stdio.h>
 #include<math.h>
 int main()
 {
-	int a, b, j, i, s, k;
-	int n;
-	printf("N = ");
+	int a, b, c, m, i, n, j;
+	printf("Nhap N: ");
 	scanf("%d", &n);
-	for(i=2; i<n; i++)
+	for(i=2; i<=n; i++)
 	{
 		if(n%i==0)
 		{
-			if(xyz(i)==1)
-			s=i;
-			
+			if(nguyento(i)==1)
+			c=i;
 		}
 	}
-	if(s==0) printf("....");
-	else printf("so do la: %d", s);
+	printf("thua so nguyen to lon nhat cua N la: %d", c);
 }
-int xyz(int b)
+int nguyento(int i)
 {
-	int j;
-	int k=1;
-	for(j=2; j<b; j++)
+ int m=1;
+ int j;
+	for(j=2; j<i; j++)
 	{
-		if(b%j==0)
-		{
-			k=0;
-		}
+		if(i%j==0) m=0;
 	}
-	return k;
+	return m;
 }
+
 
